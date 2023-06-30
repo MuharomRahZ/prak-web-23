@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ini contoh web</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            h1{
+                font-size: large;
+                font-family: 'Times New Roman', Times, serif;
+                color: blue;
+            }
+        </style>
+        <script>
+            function gantiWarna(){
+                document.body.style.backgroundColor = "Yellow";
+            }
+            function resetWarna(){
+                document.body.style.backgroundColor = "White";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HELLO WORLD! WUZZAA!</h1>
+        <p>this is a paragraph text</p>
+        <?php $nama = "Zaki"; echo "<p>Halo namaku $nama</p>"; ?>
+
+        <br>
+        <button onclick="gantiWarna()">Klik untuk ubah background color text</button>
+        <button onclick="resetWarna()">Reset</button>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tugas 3.6 | Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h2>Kalkulator Sederhana</h2>
+    <form>
+      <input type="number" id="angka1" placeholder="Masukkan Angka Pertama">
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" id="angka2" placeholder="Masukkan Angka Kedua">
+      <br><br>
+      <button type="button" onclick="hitung()">Hitung</button>
+    </form>
+    <br>
+    <label>Hasil:</label>
+    <input type="text" id="hasil" readonly>
+    
+    <script>
+      function hitung() {
+        var angka1 = parseInt(document.getElementById("angka1").value);
+        var angka2 = parseInt(document.getElementById("angka2").value);
+        var operator = document.getElementById("operator").value;
+        var hasil = 0;
+        if (operator === "+") {
+          hasil = angka1 + angka2;
+        } else if (operator === "-") {
+          hasil = angka1 - angka2;
+        } else if (operator === "*") {
+          hasil = angka1 * angka2;
+        } else if (operator === "/") {
+          hasil = angka1 / angka2;
+        }
+        document.getElementById("hasil").value = hasil;
+      }
+    </script>
+  </body>
+</html>

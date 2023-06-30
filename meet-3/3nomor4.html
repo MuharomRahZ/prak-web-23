@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tugas 3.4 | Operasi JS 2</title>
+        <script>
+            function convert(degree){
+                if(degree == 'C'){
+                    F = document.getElementById('c').value * 9/5+32;
+                    document.getElementById('f').value = Math.round(F);
+                } else {
+                    C = (document.getElementById('f').value-32)*5/9;
+                    document.getElementById('c').value=Math.round(C);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Masukkan angka pada masukkan berikut</p>>
+        <input id="c" onkeyup="convert('C')"> derajat Celcius <br> equals <br>
+        <input id="f" onkeyup="convert('F')"> derajat Fahrenheit
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Upload Dokumen</title>
+</head>
+<body>
+    <h2>Form Upload Dokumen</h2>
+    <form action="act_upload.php" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Tanggal:</td>
+                <td><input type="date" name="tgl" required><br></td>
+            </tr>
+            <tr>
+                <td>Deskripsi:</td>
+                <td><textarea name="deskripsi" rows="4" required></textarea><br></td>
+            </tr>
+            <tr>
+                <td>File:</td>
+                <td><input type="file" name="file" required><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Upload">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

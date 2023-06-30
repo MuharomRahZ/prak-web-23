@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UTS-Zaki</title>
+</head>
+<body>
+	<h1>Selamat datang di UTS-Zaki</h1>
+	<button onclick="showMeterToFeet()">Meter to Feet</button>
+	<button onclick="showCmToInch()">Centimeter to Inch</button>
+
+	<div id="input">
+		<label for="value">Masukkan nilai:</label>
+		<input type="number" id="value">
+		<button onclick="convert()">Konversi</button>
+	</div>
+
+	<div id="result"></div>
+
+	<script>
+		function showMeterToFeet() {
+			document.getElementById("input").style.display = "block";
+			document.getElementById("result").innerHTML = "";
+			document.getElementById("convert").onclick = meterToFeet;
+		}
+
+		function showCmToInch() {
+			document.getElementById("input").style.display = "block";
+			document.getElementById("result").innerHTML = "";
+			document.getElementById("convert").onclick = cmToInch;
+		}
+
+		function meterToFeet() {
+			var meter = document.getElementById("value").value;
+			var feet = meter * 3.28;
+			document.getElementById("result").innerHTML = meter + " meter = " + feet.toFixed(2) + " feet";
+		}
+
+		function cmToInch() {
+			var cm = document.getElementById("value").value;
+			var inch = cm * 0.393;
+			document.getElementById("result").innerHTML = cm + " cm = " + inch.toFixed(2) + " inch";
+		}
+
+		function convert() {
+			document.getElementById("convert").onclick();
+		}
+	</script>
+</body>
+</html>

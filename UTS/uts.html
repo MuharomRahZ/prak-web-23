@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UTS-Rahmat Zaki Muharom</title>
+    <script>
+        function showInput(type) {
+            let inputForm = document.getElementById("input-form");
+            inputForm.innerHTML = `
+                <label for="${type}-input">Masukkan nilai ${type}:</label>
+                <input type="text" id="${type}-input" name="${type}-input">
+                <button onclick="convert('${type}')">Konversi</button>
+            `;
+        }
+
+        function convert(type) {
+            let inputValue = document.getElementById(`${type}-input`).value;
+            if (inputValue === "" || isNaN(inputValue)) {
+                alert("Masukkan nilai yang valid!");
+                return;
+            }
+
+            let result;
+            if (type === "meter") {
+                result = `${inputValue} meter = ${inputValue * 3.28} feet`;
+            } else if (type === "centimeter") {
+                result = `${inputValue} cm = ${inputValue * 0.393} inch`;
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+	<h1>Selamat Datang di UTS-Rahmat Zaki Muharom</h1>
+	<p>Silahkan pilih salah satu konversi berikut:</p>
+	<button onclick="showInput('meter')">Meter to Feet</button>
+	<button onclick="showInput('centimeter')">Centimeter to Inch</button>
+
+	<div id="input-form"></div>
+	<div id="result"></div>
+</body>
+</html>
